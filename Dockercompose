@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+ app:
+ build:
+ context: .
+ dockerfile: Dockerfile
+ ports:
+ - "3000:3000"
+ environment:
+ NODE_ENV: production
+ PORT: 3000
+ # Uncomment the following line if you want to disable Next.js telemetry at runtime
+ # NEXT_TELEMETRY_DISABLED: 1
+ restart: unless-stopped
